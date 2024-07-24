@@ -18,3 +18,5 @@ Route::get('/', function () {
 Route::get('/Hero_page', function(){
    echo "Hero page"; 
 })->name('hero_page');
+
+Route::get('/section', 'assignment@hero_section')->name('controller');

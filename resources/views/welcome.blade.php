@@ -86,6 +86,7 @@
 
                 <div class="links">
                     <a href="{{route ('hero_page')}}">Hero_section</a>
+                    <a href="{{route ('controller')}}">By_controller</a>
                     <a href="https://laravel.com/docs">Docs</a>
                     <a href="https://laracasts.com">Laracasts</a>
                     <a href="https://laravel-news.com">News</a>
