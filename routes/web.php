@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/Hero_page', function(){
+   echo "Hero page"; 
+})->name('hero_page');
