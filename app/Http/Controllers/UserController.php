@@ -15,4 +15,19 @@ class UserController extends Controller
         // Return the view with users data
         return view('users.index', compact('users'));
     }
+
+    public function create()
+    {
+        return view('users.create');
+    }
+
+    public function store( Request $request){
+        $data = [
+            'name' => $request->get('name'),
+            'email' => $request->get('email'),
+            'password' => $request->get('password'),
+        ];
+        User::insert($data);
+        return redirect()->route('user_index');
+    }
 }

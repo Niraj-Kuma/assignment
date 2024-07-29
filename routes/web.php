@@ -20,4 +20,8 @@ Route::get('/Hero_page', function(){
 })->name('hero_page');
 
 Route::get('/section', 'assignment@hero_section')->name('controller');
-Route::get('/users', [UserController::class, 'index']);
+// Route::get('/users', [UserController::class, 'index']);
+Route::get('/users', 'UserController@index')->name('user_index');
+Route::get('/users/create', 'UserController@create')->name('user_create');
+Route::post('/users/store', 'UserController@store')->name('user_store');
+
