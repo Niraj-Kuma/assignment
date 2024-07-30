@@ -24,4 +24,8 @@ Route::get('/section', 'assignment@hero_section')->name('controller');
 Route::get('/users', 'UserController@index')->name('user_index');
 Route::get('/users/create', 'UserController@create')->name('user_create');
 Route::post('/users/store', 'UserController@store')->name('user_store');
+Route::get('/users/delete/{id}', 'UserController@delete')->name('user_delete');
+// Route::get('/users/edit/{id}', 'UserController@edit')->name('user_edit');
+// Route::get('/users/update/{id}', 'UserController@update')->name('user_update');
+
 

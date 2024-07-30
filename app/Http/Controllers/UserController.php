@@ -23,11 +23,28 @@ class UserController extends Controller
 
     public function store( Request $request){
         $data = [
+            
             'name' => $request->get('name'),
             'email' => $request->get('email'),
             'password' => $request->get('password'),
         ];
         User::insert($data);
         return redirect()->route('user_index');
+    }
+
+    public function delete($id){
+
+        if(!$id){
+            return redirect()->back();
+        }
+
+        $user = User::find($id);
+        if($user){
+            $user->delete();
+            return redirect()->back();
+        }
+        
+        return redirect()->back();
+
     }
 }
