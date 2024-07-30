@@ -79,6 +79,7 @@
                         <td>{{ $user->email }}</td>
                         <td>{{ $user->password }}</td>
                         <td>
+                            <a href="#" class="btn btn-primary btn-lg mr-2">Edit</a>
                             <a href="{{route ('user_delete', '$user->id')}}" class="btn btn-danger btn-lg">Delete</a>
                         </td>
 
